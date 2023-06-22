@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(128,0,128,0.7), rgba(4,9,30,0.7)), url(education1.PNG);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav-links{
+    flex: 1; 
+    text-align: right; 
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1{
+    font-size: 70px;
+}
+
+.content p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: white;
+}
+
+.apply-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.apply-btn:hover{
+    border: 1px solid purple;
+    background: purple;
+    transition: 0.5s;
+}
+
+nav .iconz{
+    display: none;
+}
+
+.course{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 150px;
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+}
+
+p{
+    color: rgba(0,0,0,0.7);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vismismot{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: rosybrown;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,1.0);
+    animation: rightdoor .5s linear forwards;
+    transform-origin: right;
+    border-left: 5px solid plum;
+}
+
+@keyframes rightdoor{
+    0%{
+        transform: perspective(1000px) rotate3d(0deg);
+    }
+
+    100%{
+        transform: perspective(2000px) rotateY(40deg);
+    }
+}
+
+.testimonials{
+    width: 70%;
+    margin: auto;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.testimonial-col{
+    flex-basis: 50%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 20px 12px;
+    background: rosybrown;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.testimonial-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,1.0);
+}
+
+.testimonial-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 70%;
+}
+
+.testimonial-col p{
+    padding: 0;
+}
+
+
+
+.testimonial-col .fa{
+    color: purple;
+}
+
+.enhance{
+    margin: 100px auto;
+    width: 70%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(logo2.jpg);
+
+}
+
+.enhance h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.enhance a{
+    text-decoration: none;
+    color: white;
+    padding: 100px 400px;
+    transition: 0.5s ease;
+}
+
+.enhance a:hover{
+    color: purple;
+}
+
+@media(max-width: 700px){
+    .content h1{
+    font-size: 30px;
+}
+}
+
+@media(max-width: 700px){
+.nav-links ul li{
+    display: block;
+}
+}
+
+@media(max-width: 700px){
+.nav-links{
+    position: absolute;
+    background: purple;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.5s;
+}
+}
+
+@media(max-width: 700px){
+    nav .iconz{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 700px){
+    .nav-links ul{
+        padding: 25px;
+    }
+
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 700px){
+.testimonial-col img{
+    margin-left: 0px;
+    margin-right: 15px;
+    
+}
+}
+
